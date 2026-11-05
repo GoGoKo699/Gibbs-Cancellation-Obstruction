@@ -10,6 +10,14 @@ const { argumentsFor, run } = require('./capture_hosted_math.cjs');
 
 async function main() {
   const args = argumentsFor(process.argv.slice(2));
+  if (args.help) {
+    console.log('run_hosted_check.cjs --root REPO --repository owner/name --revision FULLSHA --output EMPTY_DIR [--page PATH ...] [--contract JSON] [--python python3]');
+    return;
+  }
+  const output = path.resolve(args.output);
+  if (fs.existsSync(output) && fs.readdirSync(output).length) {
+    throw new Error('Use an empty output directory; preserve earlier failed evidence');
+  }
   const prefix = `https://github.com/${args.repository}/blob/${args.revision}/`;
   const attempts = [];
   const delays = [5000, 15000, 30000];
@@ -35,7 +43,9 @@ async function main() {
             }
             const status = response?.status();
             attempts.push({ url, attempt: attempt + 1, at, status });
-            if (status !== 529 || !url.startsWith(prefix) || attempt >= delays.length) {
+            if (status !== 529 || !url.startsWith(prefix) || page.url() !== url ||
+                response.url() !== url || response.request().redirectedFrom() ||
+                attempt >= delays.length) {
               return response;
             }
             await page.waitForTimeout(delays[attempt]);
@@ -50,12 +60,11 @@ async function main() {
   try {
     process.exitCode = await run(args);
   } finally {
-    const output = path.resolve(args.output);
     fs.mkdirSync(output, { recursive: true });
     fs.writeFileSync(path.join(output, 'navigation-attempts.json'), JSON.stringify({
       policy: 'At most four reads of the identical pinned URL; retry only HTTP 529 after 5, 15 and 30 seconds. No credential, host, source or collector changes.',
       attempts
-    }, null, 2) + '\n');
+    }, null, 2) + '\n', { flag: 'wx' });
   }
 }
 

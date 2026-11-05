@@ -180,15 +180,13 @@ The inverse-Lindblad use of linear stationarity constraints is established in ea
 
 The main difficulty is not forming a matrix. It is proving its rank at an exponential state, where very small numerical singular values can conceal exact dependencies. The proof has two finite inputs that feed a single analytical argument.
 
-```mermaid
-flowchart TD
-    A["Nonzero finite-field evaluation minor"] --> C["Nonzero polynomial on spectral weights"]
-    B["Modular factors give the full symmetric Galois group"] --> D["Equal-degree monomials have distinct energy sums"]
-    C --> E["Lindemann–Weierstrass transfer to Gibbs weights"]
-    D --> E
-    E --> F["Analytic genericity in the Hamiltonian family"]
-    F --> G["One-dimensional local stationarity kernel"]
-```
+| Proof stage | Evidence used | What follows |
+|---|---|---|
+| Local-map branch | A nonzero finite-field minor at a polynomial input | The selected homogeneous polynomial on spectral weights is nonzero |
+| Spectral branch | Modular factorizations determine the full symmetric Galois group | The only rational energy relation is the trace relation |
+| Join the branches | Equal monomial degrees and the energy-relation constraint | Different determinant monomials have distinct energy sums |
+| Transfer to Gibbs weights | Lindemann–Weierstrass independence of exponentials | At a nonzero algebraic inverse temperature, the selected Gibbs evaluation minor is nonzero |
+| Pass to generic Hamiltonians | Witness scaling and real-analytic genericity | At each fixed positive inverse temperature, the generic local stationarity kernel is one dimensional |
 
 ### A finite calculation supplies a nonzero polynomial
 
