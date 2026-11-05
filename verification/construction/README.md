@@ -34,7 +34,7 @@ stationary state, and let
 The following numbers are deliberately rounded **outward** from the Arb
 certificates. Operator norms of matrices are denoted $`\lVert\cdot\rVert_\infty`$;
 $`\lVert\mathcal A\rVert_{2\to2}`$ is the norm induced by the unnormalized
-Hilbert–Schmidt norm $`\lVertX\rVert_2=\sqrt{\mathrm{Tr}X^\dagger X}`$.
+Hilbert–Schmidt norm $`\lVert X\rVert_2=\sqrt{\mathrm{Tr}X^\dagger X}`$.
 Trace distance means $`\tfrac12\lVert\sigma-\rho\rVert_1`$.
 
 | Certified quantity | β = 0.003 | β = 0.01 |
@@ -54,7 +54,7 @@ uniform, conservatively rounded bounds
 ```math
 C_b(\beta)\succeq0.0512 I_{15},\qquad
 \mathrm{Re}\langle X,\mathcal D_\beta X\rangle
-\le-4.12\lVertX\rVert_2^2\quad(\mathrm{Tr}X=0),\qquad
+\le-4.12\lVert X\rVert_2^2\quad(\mathrm{Tr}X=0),\qquad
 \lVert\mathcal D_\beta\rVert_{2\to2}\le109.645.
 ```
 
@@ -154,7 +154,7 @@ The exact rational $`51\times31`$ matrix $`R`$ is also stored in
 `design_witness.json`. Its infinite-temperature residual is certified as
 
 ```math
-\lVertA(0)R-I_{31}\rVert_\infty<3.351\times10^{-11}.
+\lVert A(0)R-I_{31}\rVert_\infty<3.351\times10^{-11}.
 ```
 
 Here this one norm is the maximum absolute row-sum norm. At each desired
@@ -231,10 +231,10 @@ $`K_x=\sum_ax_aP_a`$,
 Consequently
 
 ```math
-\delta=16-\frac12\lVertK_x\rVert_\infty>0
+\delta=16-\frac12\lVert K_x\rVert_\infty>0
 ```
 
-is a valid coercivity lower bound. The script bounds $`\lVertK_x\rVert_\infty`$
+is a valid coercivity lower bound. The script bounds $`\lVert K_x\rVert_\infty`$
 by the minimum of row sums, the Frobenius norm, and
 
 ```math
@@ -259,7 +259,7 @@ state. Coercivity gives
 
 ```math
 \mathrm{Re}\langle X,\mathcal L_{\beta,\eta}X\rangle
-\le-\eta\delta\lVertX\rVert_2^2\qquad(\mathrm{Tr}X=0).
+\le-\eta\delta\lVert X\rVert_2^2\qquad(\mathrm{Tr}X=0).
 ```
 
 Hence the stationary state is unique, all other eigenvalues have strictly
@@ -294,10 +294,10 @@ E=\mathsf Q\mathcal D_\beta\mathsf Q,
 
 and $`D_Q=\mathsf Q(-i[H_0,\cdot])\mathsf Q`$.
 Here $`A^{-1}`$ denotes only the inverse on diagonal trace-zero matrices.
-Coercivity gives $`\lVertA^{-1}\rVert\le1/\delta`$. The simple spectrum gives
+Coercivity gives $`\lVert A^{-1}\rVert\le1/\delta`$. The simple spectrum gives
 
 ```math
-\lVertD_Q^{-1}\rVert=\nu^{-1},\qquad
+\lVert D_Q^{-1}\rVert=\nu^{-1},\qquad
 \nu=\min_{m\ne n}|E_m-E_n|.
 ```
 
@@ -319,7 +319,7 @@ Define $`F=1+M/\delta`$ and
 $`r=\lVert\mathcal D_\beta\rho_\beta\rVert_2`$. Then
 
 ```math
-\lVertE-CA^{-1}B\rVert\le MF,\qquad \lVertC\rho_\beta\rVert_2=r.
+\lVert E-CA^{-1}B\rVert\le MF,\qquad \lVert C\rho_\beta\rVert_2=r.
 ```
 
 For
@@ -385,16 +385,16 @@ Hamiltonian norm bound is $`h<37.862013`$. With
 $`z=0.01h`$, the uniform exponential remainder obeys
 
 ```math
-\left\lVerte^{-\beta H_0}-\sum_{k=0}^{20}\frac{(-\beta H_0)^k}{k!}\right\rVert_2
+\left\lVert e^{-\beta H_0}-\sum_{k=0}^{20}\frac{(-\beta H_0)^k}{k!}\right\rVert_2
 \le\sqrt{32}\,e^z\frac{z^{21}}{21!}
 <2.244\times10^{-28}=:\tau.
 ```
 
-For $`b_i=\lVertB_i\rVert_2`$, rigorous entrywise remainder radii are
+For $`b_i=\lVert B_i\rVert_2`$, rigorous entrywise remainder radii are
 
 ```math
 |(\Delta M)_{ij}|\le b_i\tau\sum_a|R_{aj}|,\qquad
-|(\Delta q)_i|\le b_i\tau(64+0.01\lVerty\rVert_1).
+|(\Delta q)_i|\le b_i\tau(64+0.01\lVert y\rVert_1).
 ```
 
 The code covers the entire interval with the 128 exact rational cells

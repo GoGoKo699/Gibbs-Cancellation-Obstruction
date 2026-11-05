@@ -143,7 +143,7 @@ where $`\mathcal R_b`$ traces out that bond and replaces it by its maximally mix
 
 ```math
 \mathrm{Re}\langle A,\mathcal D_0(A)\rangle
-\le-16\lVertA\rVert_2^2
+\le-16\lVert A\rVert_2^2
 \qquad(\mathrm{Tr}A=0).
 ```
 
@@ -151,7 +151,7 @@ Since $`\lVert\mathcal D_\beta-\mathcal D_0\rVert_{2\to2}=O(\beta)`$, a smaller 
 
 ```math
 \mathrm{Re}\langle A,\mathcal D_\beta(A)\rangle
-\le-\delta\lVertA\rVert_2^2
+\le-\delta\lVert A\rVert_2^2
 \qquad(\mathrm{Tr}A=0).
 ```
 

@@ -19,15 +19,15 @@ The raw local map representation has 960 columns, while the actual map space has
 Let $`R`$ synthesize a superoperator from raw coefficients. A raw bond matrix unit, extended by the identity map on the other three qubits, has global Frobenius norm 8. The 240 columns within one bond are orthogonal, so Cauchy–Schwarz over four bonds gives
 
 ```math
-\lVertRc\rVert_{\mathrm F}\le\sum_{b=1}^{4}8\lVertc_b\rVert_2
-\le16\lVertc\rVert_2.
+\lVert Rc\rVert_{\mathrm F}\le\sum_{b=1}^{4}8\lVert c_b\rVert_2
+\le16\lVert c\rVert_2.
 ```
 
 Let $`M`$ be an invertible 923-by-923 minor of the raw evaluation matrix, whose output coordinates are $`\mathrm{Tr}(P\mathcal A(\rho))`$. Its inverse determines a right inverse on the full evaluation image. Orthogonal projection away from the Hamiltonian kernel and conversion from Pauli traces to Hilbert–Schmidt coordinates yield
 
 ```math
 s_\rho\ge
-\frac{1}{16\sqrt{32}\,\lVertM^{-1}\rVert_{\mathrm F}}.
+\frac{1}{16\sqrt{32}\,\lVert M^{-1}\rVert_{\mathrm F}}.
 ```
 
 The [minor verifier](../verification/gap/verify_gap_bound.py) encloses the true Gibbs exponential and every inverse entry, then bounds the inverse Frobenius norm upward. Its [derivation](../verification/gap/README.md#why-a-minor-inverse-gives-a-lower-bound) explains why restricting to selected rows loses no evaluation direction.
