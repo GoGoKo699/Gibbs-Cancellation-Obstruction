@@ -1,0 +1,19 @@
+{
+  "beta_exact": "1/100",
+  "precision_bits": 256,
+  "python_flint_version": "0.9.0",
+  "hamiltonian_sha256": "4356bc7a4090a83426c93d2a4142bbc83a39fa8f9707208a268e2cb057bf8b2d",
+  "minor_indices_sha256": "c057414501f9a4c0e16f27c16e53083374aa01d5c9f55356d80f90d40a97cbd1",
+  "minor_order": 923,
+  "inverse_certified": true,
+  "inverse_frobenius_upper_ball": "[2661489995837763.76033402824865 +/- 4.66e-16]",
+  "inverse_max_entry_radius_ball": "[3.82077531243688528233515689787e-42 +/- 3.44e-72]",
+  "intrinsic_s_lower_decimal": "4.151262440707400E-18",
+  "gap_over_J_half_trace_error_upper_decimal": "4.817811517739620E+17",
+  "intrinsic_s_lower_ball": "[4.15126244070740075665876967439e-18 +/- 3.95e-48]",
+  "gap_coefficient_upper_ball": "[481781151773961958.591846040188 +/- 3.76e-13]",
+  "statement": "gap(L) <= coefficient * ||L||_(2->2) * half_trace_distance(stationary_state, Gibbs_target)",
+  "basis_normalization": "Global normalized Pauli basis; raw synthesis norm<=16; Pauli traces divided bysqrt32",
+  "numerical_svd_used": false,
+  "elapsed_seconds": 22.227547296999546
+}
