@@ -1,7 +1,7 @@
 'use strict';
 
 // Keep the canonical collector unchanged. Retry only a bounded, observed
-// HTTP 529 response while reading the same public, commit-pinned GitHub URL.
+// HTTP 504 or 529 response while reading the same public, commit-pinned GitHub URL.
 // Access failures, redirects and other statuses retain the collector's behavior.
 const fs = require('fs');
 const path = require('path');
@@ -43,7 +43,7 @@ async function main() {
             }
             const status = response?.status();
             attempts.push({ url, attempt: attempt + 1, at, status });
-            if (status !== 529 || !url.startsWith(prefix) || page.url() !== url ||
+            if (![504, 529].includes(status) || !url.startsWith(prefix) || page.url() !== url ||
                 response.url() !== url || response.request().redirectedFrom() ||
                 attempt >= delays.length) {
               return response;
@@ -62,7 +62,7 @@ async function main() {
   } finally {
     fs.mkdirSync(output, { recursive: true });
     fs.writeFileSync(path.join(output, 'navigation-attempts.json'), JSON.stringify({
-      policy: 'At most four reads of the identical pinned URL; retry only HTTP 529 after 5, 15 and 30 seconds. No credential, host, source or collector changes.',
+      policy: 'At most four reads of the identical pinned URL; retry only HTTP 504 or 529 after 5, 15 and 30 seconds. No credential, host, source or collector changes.',
       attempts
     }, null, 2) + '\n', { flag: 'wx' });
   }
