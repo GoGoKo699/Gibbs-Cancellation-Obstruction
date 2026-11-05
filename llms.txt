@@ -1,0 +1,21 @@
+# Gibbs Cancellation Obstruction
+
+This is a scientific research repository about exact Gibbs stationarity under strictly local autonomous quantum dynamics. Read the model before generalizing a claim.
+
+## Main account
+
+- [Overview](README.md)
+- [Scientific reading route](science/README.md)
+- [Model and three main theorems](science/model.md)
+- [Local superoperator dimension and physical rigidity](science/local-kernel.md)
+- [Exact algebraic Gibbs certificate](science/gibbs-certificate.md)
+- [Bounded-strength accuracy and relaxation](science/accuracy-relaxation.md)
+- [Matching high-temperature construction](science/local-construction.md)
+- [Certified quantitative witness](science/quantitative-witness.md)
+- [Physical interpretation and limits](science/interpretation.md)
+- [Related work and attribution](references/related-work.md)
+- [Verification commands](verification/README.md)
+
+## Scope that must be preserved
+
+Five qubits on an open chain. Coherent terms and individual Lindblad jumps are supported onsite or on an adjacent pair. Total stationarity permits cancellation between local terms; neither detailed balance nor frustration freeness is assumed. The generic exact-kernel result fixes inverse temperature before taking the generic Hamiltonian set. The matching accuracy-relaxation law is a target-dependent high-temperature asymptotic statement under a norm cap on the entire generator. The continuous numerical interval certifies the positive construction, not full evaluation rank at every real temperature. No arbitrary-chain-length theorem or useful finite-error converse constant is established.
