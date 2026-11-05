@@ -6,7 +6,7 @@ thresholding floating-point singular values.
 
 ## Reproduce
 
-Use Python3 with `python-flint==0.9.0`:
+Use Python 3 with `python-flint==0.9.0`:
 
 ```sh
 python -m pip install -r requirements.txt
@@ -20,14 +20,14 @@ optional; without it the report is printed without writing a file. The
 standard import is `from flint import ...`; no workspace-specific paths,
 NumPy archives, numerical eigenvectors, or SciPy routines are required.
 
-The input `hamiltonian.json` specifies the51 onsite/nearest-neighbor Pauli
-coefficients. The input `quantitative-minor.json` specifies923 output rows
-and923 raw map columns. Rows were selected using a numerical heuristic for
+The input `hamiltonian.json` specifies the 51 onsite/nearest-neighbor Pauli
+coefficients. The input `quantitative-minor.json` specifies 923 output rows
+and 923 raw map columns. Rows were selected using a numerical heuristic for
 conditioning, but their validity is established anew by a certified Arb
 inverse at each requested temperature. A numerical choice of a witness is
 not accepted as its verification.
 
-At256 bits the two recorded runs certify the safe rounded inequalities
+At 256 bits the two recorded runs certify the safe rounded inequalities
 
 | Exact inverse temperature | Lower bound on intrinsic s_rho | Coefficient C in gap <= C J epsilon |
 | --- | ---: | ---: |
@@ -44,21 +44,21 @@ finite-error experimental penalty or an efficient sampler.
 
 Let B_j be a raw column superoperator: one local two-qubit Pauli matrix unit
 on a chosen bond, extended by the identity superoperator on the other three
-qubits. In the normalized global Pauli basis P/sqrt32, a single B_j has64
-unit entries and Frobenius norm8. Within each bond, the240 such maps are
+qubits. In the normalized global Pauli basis P/sqrt32, a single B_j has 64
+unit entries and Frobenius norm 8. Within each bond, the 240 such maps are
 orthogonal. Maps on different bonds need not be orthogonal, even when the
 bonds are disjoint.
 
-Let R synthesize a superoperator from its960 raw coefficients. Grouping
+Let R synthesize a superoperator from its 960 raw coefficients. Grouping
 coefficients by bond and applying Cauchy-Schwarz gives exactly
 
     ||R c||_F <= sum_b 8 ||c_b||_2 <= 16 ||c||_2.
 
-Thus the raw frame operator has upper bound256. A raw evaluation matrix T
+Thus the raw frame operator has upper bound 256. A raw evaluation matrix T
 uses the coordinates Tr(P L(rho)), whose Euclidean norm is sqrt32 times
 the Hilbert-Schmidt norm of L(rho). Neither normalization may be omitted.
 
-For comparison, if G=R^dagger R=Q Lambda Q^T on its924-dimensional positive
+For comparison, if G=R^dagger R=Q Lambda Q^T on its 924-dimensional positive
 range, an orthonormal intrinsic evaluation matrix is
 
     E_intrinsic = T Q Lambda^(-1/2) / sqrt32.
@@ -68,10 +68,10 @@ this ill-conditioned singular value or the whitening matrix.
 
 ## Why a minor inverse gives a lower bound
 
-The local map space V has dimension924. The nonzero Hamiltonian
-commutator D_H is in the evaluation kernel. Suppose M is a923-by923 minor
+The local map space V has dimension 924. The nonzero Hamiltonian
+commutator D_H is in the evaluation kernel. Suppose M is a 923-by-923 minor
 of T, using selected raw maps B_C. A certified inverse proves rank at
-least923. The commutator gives rank at most923, so the kernel in V is
+least 923. The commutator gives rank at most 923, so the kernel in V is
 exactly span(D_H), and the selected columns span the evaluation image.
 
 For A in V perpendicular to D_H, solve
@@ -79,7 +79,7 @@ For A in V perpendicular to D_H, solve
     c = M^(-1) [selected raw coordinates of A(rho)].
 
 Then B_C c and A have the same full evaluation: their evaluations lie in
-the923-dimensional image on which the selected rows are injective. Their
+the 923-dimensional image on which the selected rows are injective. Their
 difference is a Hamiltonian commutator. Orthogonal projection therefore
 gives
 
@@ -103,7 +103,7 @@ the independently proved stability inequality yields
 The Hamiltonian is reconstructed using integer bit operations for Pauli
 actions. Its Hermiticity, tracelessness, nonzero value, and allowed support
 are checked. The inverse temperature is parsed as an exact rational.
-Arb encloses the32-by32 matrix exponential and positive partition
+Arb encloses the 32-by-32 matrix exponential and positive partition
 function, so the evaluation entries enclose the true Gibbs values.
 Hermiticity makes each Pauli trace exactly real; its imaginary enclosure
 is checked to contain zero. Normalization fixes the identity coefficient

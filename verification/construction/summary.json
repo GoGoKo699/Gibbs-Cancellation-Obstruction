@@ -54,7 +54,7 @@
   "precision_bits": 256,
   "checks_passed": true,
   "sha256": {
-    "README.md": "d48049baec24809edf9cc7de673f2ff951c895b290c5691c66e34dbb4f7bbdca",
+    "README.md": "c42e9c3e97010411ee51bc5b339ae0869c312a6bb2a9c9df093cfc57541170ec",
     "requirements.txt": "3ca9d2d1c49144dc7909f2cf52113bfa3dad2b8d855cef27dc2cafb9fa9bf62f",
     "hamiltonian.json": "4356bc7a4090a83426c93d2a4142bbc83a39fa8f9707208a268e2cb057bf8b2d",
     "design_witness.json": "d1ad6a657f0694125f6c53b918d2a5ae1292d7b2b69f4c43e341fcd7c1deeced",

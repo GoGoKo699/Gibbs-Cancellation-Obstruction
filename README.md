@@ -6,7 +6,7 @@ For five qubits on an open chain, the supported result excludes genuine dissipat
 
 At sufficiently high temperature, the associated optimal relaxation gap under a fixed total generator-strength budget is proportional to the allowed stationary trace-distance error as that error tends to zero. The temperature interval and constants depend on the target Hamiltonian. The result does not establish a theorem for arbitrary chain lengths or larger fixed neighborhoods.
 
-The proof combines a local-superoperator dimension calculation, an exact finite-field/Galois certificate and analytic genericity. A positive local construction matches the accuracy–relaxation exponent. For the explicit witness, rigorous interval arithmetic also certifies positive reservoirs throughout $0\le\beta\le0.01$ and finite-error bounds at two rational temperatures. The continuous construction interval is separate from the evaluation-rank claim. The certified converse constants are extremely large, so a useful finite-error speed penalty remains unestablished.
+The proof combines a local-superoperator dimension calculation, an exact finite-field/Galois certificate and analytic genericity. A positive local construction matches the accuracy–relaxation exponent. For the explicit witness, rigorous interval arithmetic also certifies positive reservoirs throughout $`0\le\beta\le0.01`$ and finite-error bounds at two rational temperatures. The continuous construction interval is separate from the evaluation-rank claim. The certified converse constants are extremely large, so a useful finite-error speed penalty remains unestablished.
 
 ## Read the result
 
@@ -23,6 +23,14 @@ The proof combines a local-superoperator dimension calculation, an exact finite-
 Stationarity constraint and null-space methods are inherited from [Bairey et al. (2020)](https://arxiv.org/abs/1907.11154) and [Souza and Iemini (2026)](https://arxiv.org/abs/2408.05302). Weak-coupling population balance is inherited from [Tupkary et al. (2023)](https://arxiv.org/abs/2301.02146). The result here establishes the generic Gibbs-family kernel and a matching bounded-strength accuracy–relaxation law in the stated five-qubit model.
 
 The distinction from [Gibbs-Locality-Obstruction](https://github.com/GoGoKo699/Gibbs-Locality-Obstruction) is that local terms need not preserve the target separately. This theorem allows cancellation among all overlapping local contributions. It does not cover arbitrary chain lengths, larger fixed neighborhoods, quasi-local tails, retained auxiliary systems, or general time-dependent preparation protocols. Commuting and other exceptional Hamiltonians may admit exact local thermalizers.
+
+## Learn the project
+
+The single educational anchor is **Ángel Rivas and Susana F. Huelga, *Open Quantum Systems: An Introduction* (first edition, 2012)**. The [learning route](learning/README.md) uses the freely available author preprint, version 2. Its section numbering differs from the published book; the [source-to-project bridge](learning/bridge.md) gives both reading routes, translates the notation, and supplies the missing steps to this project's result.
+
+The [30-milestone map](learning/milestones.md) has 12 background/preliminaries targets and 18 narrative/innovation targets. The first phase builds from states and generators to the complete thermalization model. The second connects the cancellation kernel, exact certificate, stability bound and positive construction into the accuracy–relaxation law. The map is a common guide to the project, independent of a particular reader's prior study or assessment history.
+
+The [LLM reading guide](llms.txt) provides direct routes for studying the story, inspecting the theorems, or reproducing the calculations.
 
 ## Reproduce the finite certificates
 
