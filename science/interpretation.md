@@ -6,11 +6,11 @@ Individual local pieces of a Hamiltonian generally disturb its Gibbs state. Thei
 
 The five-qubit result resolves that possibility for on-site and adjacent-pair generator terms. It finds the entire stationary local linear space, even before imposing complete positivity. The only surviving direction is the total Hamiltonian commutator. Therefore an exact stationary local generator can preserve populations but cannot thermalize them.
 
-The result concerns a prescribed Gibbs state of a prescribed interacting Hamiltonian. Local dissipators can certainly have unique steady states. Those states generally have an effective modular Hamiltonian $-\log\rho$ containing interactions beyond the desired nearest-neighbor family.
+The result concerns a prescribed Gibbs state of a prescribed interacting Hamiltonian. Local dissipators can certainly have unique steady states. Those states generally have an effective modular Hamiltonian $`-\log\rho`$ containing interactions beyond the desired nearest-neighbor family.
 
 ## Why five qubits appear
 
-For an open chain, the local trace-annihilating map space has dimension $12n+216(n-1)$. Its evaluation target has dimension $4^n-1$.
+For an open chain, the local trace-annihilating map space has dimension $`12n+216(n-1)`$. Its evaluation target has dimension $`4^n-1`$.
 
 | Sites | Local map-space dimension | Traceless state-space dimension |
 |---:|---:|---:|
@@ -32,15 +32,15 @@ The constants can be poorly conditioned. The [quantitative witness](quantitative
 
 ## Consistent exceptions
 
-At $\beta=0$, the target is maximally mixed. Local depolarization fixes it and mixes rapidly. The theorem excludes that endpoint, and its conditioning deteriorates on approach to it.
+At $`\beta=0`$, the target is maximally mixed. Local depolarization fixes it and mixes rapidly. The theorem excludes that endpoint, and its conditioning deteriorates on approach to it.
 
 Commuting Hamiltonians also lie in exceptional subfamilies. For a Hamiltonian diagonal in a product basis, local dephasing is genuine dissipation that leaves the Gibbs state invariant, although it need not select its populations uniquely. This does not conflict with a generic statement over all 51 Hamiltonian parameters.
 
 With global support, the reset generator
 
-$$
-\mathcal L(A)=\operatorname{Tr}(A)\rho-A
-$$
+```math
+\mathcal L(A)=\mathrm{Tr}(A)\rho-A
+```
 
 has the exact Gibbs target as its unique equilibrium and a constant relaxation rate. It is outside the allowed support class for a correlated target. The obstruction is therefore about simultaneous locality and exact stationary thermalization.
 

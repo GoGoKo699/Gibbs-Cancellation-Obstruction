@@ -16,6 +16,16 @@ This is a scientific research repository about exact Gibbs stationarity under st
 - [Related work and attribution](references/related-work.md)
 - [Verification commands](verification/README.md)
 
+## Learning route
+
+The sole educational anchor is Rivas and Huelga, Open Quantum Systems: An Introduction, first edition 2012, using author preprint arXiv:1104.5242v2. The preprint and published book have different section numbering; use the bridge's verified mapping.
+
+- [Learning entrypoint](learning/README.md)
+- [Source-to-project bridge and worked example](learning/bridge.md)
+- [Exactly 30 common understanding milestones](learning/milestones.md): M01–M12 background/preliminaries; M13–M30 narrative/innovation.
+
+For the physical story, read the learning bridge and science/interpretation.md. For a proof review, read science/model.md, local-kernel.md and gibbs-certificate.md, then accuracy-relaxation.md and local-construction.md. For numerical constants, use science/quantitative-witness.md together with the exact/interval verification guide. These routes are explanations and understanding targets; they contain no personal learner assessments.
+
 ## Scope that must be preserved
 
 Five qubits on an open chain. Coherent terms and individual Lindblad jumps are supported onsite or on an adjacent pair. Total stationarity permits cancellation between local terms; neither detailed balance nor frustration freeness is assumed. The generic exact-kernel result fixes inverse temperature before taking the generic Hamiltonian set. The matching accuracy-relaxation law is a target-dependent high-temperature asymptotic statement under a norm cap on the entire generator. The continuous numerical interval certifies the positive construction, not full evaluation rank at every real temperature. No arbitrary-chain-length theorem or useful finite-error converse constant is established.

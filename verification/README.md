@@ -21,7 +21,7 @@ The full run typically takes a few minutes or less on a modern CPU. No GPU, prop
 python verification/exact_certificate.py
 ```
 
-This independently reconstructs the 32-by-32 integer Hamiltonian from its Pauli coefficients. It recomputes the selected 923-minor at the polynomial state $H_0^{31}$, the full integer characteristic polynomial, its modular factor patterns, and the 31-dimensional population-control minor.
+This independently reconstructs the 32-by-32 integer Hamiltonian from its Pauli coefficients. It recomputes the selected 923-minor at the polynomial state $`H_0^{31}`$, the full integer characteristic polynomial, its modular factor patterns, and the 31-dimensional population-control minor.
 
 | Certificate | Reproduced value | Role |
 |---|---|---|
@@ -50,7 +50,7 @@ python verification/construction/certify_construction.py --beta 1/100 --output v
 python verification/construction/certify_interval.py --cells 128 --output verification/local-output/construction-interval.json
 ```
 
-The [construction package](construction/README.md) gives the full exact coefficient prescription and its derivation. Rational polynomial test matrices impose exact population balance without numerical energy eigenvectors. Interval linear solves, positive coefficient matrices, dissipative coercivity and spectral enclosures prove the stated error and gap bounds. The interval run covers every rational cell from zero to $1/100$ with a rigorous exponential Taylor remainder.
+The [construction package](construction/README.md) gives the full exact coefficient prescription and its derivation. Rational polynomial test matrices impose exact population balance without numerical energy eigenvectors. Interval linear solves, positive coefficient matrices, dissipative coercivity and spectral enclosures prove the stated error and gap bounds. The interval run covers every rational cell from zero to $`1/100`$ with a rigorous exponential Taylor remainder.
 
 The continuous interval concerns the construction and coercivity. It does not certify full evaluation rank at every real temperature in that interval. The two rational point examples separately satisfy the exact obstruction theorem.
 
@@ -59,3 +59,7 @@ The continuous interval concerns the construction and coercivity. It does not ce
 The construction reports use Arb's midpoint-plus-radius notation. A printed ball encloses a value; it is not a decimal equality. Use the safely rounded bounds in the [quantitative account](../science/quantitative-witness.md), or inspect the directed endpoints in the code. An enclosure failure should remain a failure until precision or the mathematical bound is improved.
 
 The Hamiltonian and rational design witnesses are sufficient to reproduce all results. Exploratory arrays, numerical searches, full literature PDFs and private research records are not dependencies. When changing a mathematical input, rerun the affected certificate and update both the account and its recorded output. A previous passing report does not validate changed bytes.
+
+## Actual hosted mathematics
+
+The separate [hosted rendering check](hosted/README.md) compares every expression on the commit-pinned GitHub pages with its source at wide and narrow viewports, and retains screenshots for visual review. It is independent of the six scientific certificate checks. A rendering pass does not establish a mathematical theorem; a certificate pass does not establish readable rendering.

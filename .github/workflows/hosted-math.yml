@@ -25,7 +25,7 @@ jobs:
         shell: bash
         run: |
           npm install --prefix "$RUNNER_TEMP/math-deps" playwright@1.56.1 mathjax-full@3.2.1
-          "$RUNNER_TEMP/math-deps/node_modules/.bin/playwright" install --with-deps chromium
+          "$RUNNER_TEMP/math-deps/node_modules/.bin/playwright" install chromium
 
       - name: Capture the actual GitHub mathematics
         shell: bash
@@ -37,9 +37,7 @@ jobs:
             --root "$GITHUB_WORKSPACE" \
             --repository "$SOURCE_REPOSITORY" \
             --revision "$SOURCE_REVISION" \
-            --output "$RUNNER_TEMP/hosted-evidence" \
-            --page README.md \
-            --page science/quantitative-witness.md
+            --output "$RUNNER_TEMP/hosted-evidence"
 
       - name: Retain the report and actual captures
         if: always()
