@@ -33,7 +33,7 @@ jobs:
           SOURCE_REVISION: ${{ github.event.pull_request.head.sha }}
           SOURCE_REPOSITORY: ${{ github.repository }}
         run: |
-          NODE_PATH="$RUNNER_TEMP/math-deps/node_modules" node verification/hosted/capture_hosted_math.cjs \
+          NODE_PATH="$RUNNER_TEMP/math-deps/node_modules" node verification/hosted/run_hosted_check.cjs \
             --root "$GITHUB_WORKSPACE" \
             --repository "$SOURCE_REPOSITORY" \
             --revision "$SOURCE_REVISION" \
