@@ -30,6 +30,7 @@ def main():
         raise RuntimeError('Hamiltonian inputs disagree')
     commands = [
         ('exact', ['verification/exact_certificate.py']),
+        ('ground-thermal', ['verification/ground-thermal/certify_ground_thermal.py']),
         ('gap-beta003', ['verification/gap/verify_gap_bound.py', '--beta', '3/1000']),
         ('gap-beta01', ['verification/gap/verify_gap_bound.py', '--beta', '1/100']),
         ('construction-beta003', ['verification/construction/certify_construction.py', '--beta', '3/1000']),
@@ -70,6 +71,20 @@ def main():
                 raise RuntimeError(f'{name} did not certify every required bound')
             if name.startswith('gap') and payload.get('inverse_certified') is not True:
                 raise RuntimeError(f'{name} did not certify its inverse')
+            if name == 'ground-thermal':
+                required = {
+                    'all_32_energy_balls_disjoint',
+                    'normalized_ground_eigenvector_enclosed',
+                    'all_nine_ground_marginals_positive_definite',
+                    'mu_and_ratio_minimizing_supports_certified',
+                    'thermal_crossing_brackets_certified',
+                    'all_four_population_forms_strictly_negative',
+                }
+                accepted = payload.get('accepted_checks', {})
+                if set(accepted) != required or any(value is not True for value in accepted.values()):
+                    raise RuntimeError('ground-thermal did not certify every required inequality')
+                if payload.get('hamiltonian_sha256') != source_hashes['verification/data/hamiltonian.json']:
+                    raise RuntimeError('ground-thermal used an unexpected Hamiltonian input')
             report['checks'].append({'name': name, 'status': 'pass',
                                      'command': command[1:],
                                      'seconds': time.monotonic() - began,

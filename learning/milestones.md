@@ -176,6 +176,8 @@ Each milestone describes an intrinsic understanding target and its place in the 
 
 **Source pointers.** [Model and all three theorems](../science/model.md); [physical scope](../science/interpretation.md); [bridge: five-qubit evaluation map](bridge.md#from-one-bond-to-the-five-qubit-evaluation-map). The anchor's relevant framework is [§5.2, Eq. (51)](https://arxiv.org/pdf/1104.5242v2#page=41); the particular support model and theorem are project material.
 
+**Finite-temperature comparison.** Keep the target Hamiltonian $`H_0`$ distinct from the controlled Hamiltonian $`K`$. The original theorem restricts both coherent terms and individual jumps; the comparison keeps strict local jumps but permits global $`K`$. Retain the 51-parameter, fixed-temperature/generic-Hamiltonian quantifiers. [Comparison model](../science/finite-temperature-feasibility.md#two-coherent-control-models).
+
 ## Phase II: narrative and innovation
 
 ### M13
@@ -290,6 +292,8 @@ Each milestone describes an intrinsic understanding target and its place in the 
 
 **Source pointers.** Rivas–Huelga [§5.2, Eq. (51), p. 41](https://arxiv.org/pdf/1104.5242v2#page=41) for the GKLS form; [physical rigidity](../science/local-kernel.md#why-a-hamiltonian-generator-cannot-conceal-dissipation); [bridge: linear kernel to obstruction](bridge.md#from-a-linear-kernel-to-a-physical-obstruction).
 
+**Ground-population connection.** A Gibbs eigenvector has zero diagonal commutator for every $`K`$, including a global one. Strict negativity of every allowed nonscalar jump's ground-population form prevents cancellation in that single diagonal equation. This is distinct from the full-map purity argument above. [Cold exclusion](../science/finite-temperature-feasibility.md#a-full-ground-population-form-excludes-every-colder-target).
+
 ### M21
 
 **Exact rank and quantitative conditioning are different information**
@@ -360,6 +364,8 @@ Each milestone describes an intrinsic understanding target and its place in the 
 
 **Source pointers.** [Exact secular balance](../science/local-construction.md#exact-secular-balance); [weak-coupling attribution](../references/related-work.md#boundary-thermalization-and-weak-coupling-limits); [bridge: population balance](bridge.md#exact-population-balance-leaves-an-admissible-coherence-drift); Rivas–Huelga [§6.2.8](https://arxiv.org/pdf/1104.5242v2#page=73) for the stronger exact thermal condition used for comparison.
 
+**Global-control consequence.** For simple Gibbs spectrum, zero energy diagonal of $`B=\mathcal D_\beta(\rho_\beta)`$ permits exact off-diagonal cancellation by $`K_{mn}=-iB_{mn}/(p_n-p_m)`$. Verify the sign directly and explain why this generally global $`K`$ need not belong to the original local class. [Exact completion](../science/finite-temperature-feasibility.md#exact-high-temperature-preparation-with-global-coherent-control).
+
 ### M26
 
 **The singular stationary problem has the right restricted inverses**
@@ -387,6 +393,8 @@ Each milestone describes an intrinsic understanding target and its place in the 
 **Conceptual connection.** This Hilbert–Schmidt contraction is proved for the constructed family. It is not inferred from complete positivity alone, and negative numerical range is used as a sufficient condition rather than as a general characterization of spectral stability.
 
 **Source pointers.** [Direct relaxation bound](../science/local-construction.md#a-direct-relaxation-bound); [bridge: contraction estimate](bridge.md#a-direct-contraction-estimate-supplies-the-rate); Rivas–Huelga [§4.3](https://arxiv.org/pdf/1104.5242v2#page=29) for trace-norm contraction and [§5.4, Theorem 5.4](https://arxiv.org/pdf/1104.5242v2#page=46) for the distinct spectral relaxation criterion.
+
+**Coherent-control comparison.** An arbitrary global Hermitian commutator is also Hilbert–Schmidt skew-adjoint. Exact global-$`K`$ cancellation therefore retains the same bath coercivity and proves uniqueness and attraction. Distinguish this unscaled margin from a gap after a norm budget on the full generator. [Global-control proof](../science/finite-temperature-feasibility.md#exact-high-temperature-preparation-with-global-coherent-control).
 
 ### M28
 
@@ -416,6 +424,8 @@ Each milestone describes an intrinsic understanding target and its place in the 
 
 **Source pointers.** [Quantitative witness](../science/quantitative-witness.md); [verification guide](../verification/README.md); [exact reservoir prescription](../verification/construction/README.md); [bridge: practical constants](bridge.md#what-the-certified-constants-do-and-do-not-say).
 
+**Ground/thermal evidence.** Read the complete certified energy spectrum, nine marginal spectra, thermal deficit and four positive-LDL margins in the [ground/thermal certificate](../verification/ground-thermal/README.md). Explain why the inherited $`\mu/2`$ theorem supplies the approximation floor, while monotonicity of the exact population forms extends a single endpoint certificate to every real $`\beta\ge12/5`$. Neither role changes the distinction between the reservoir interval and evaluation rank, nor makes the original loose gap constants sharp.
+
 ### M30
 
 **The physical conclusion and its boundaries fit together**
@@ -429,3 +439,5 @@ Each milestone describes an intrinsic understanding target and its place in the 
 **Conceptual connection.** An exact finite-system obstruction and a sharp asymptotic exponent can be meaningful without demonstrating a thermodynamic theorem, necessary quasi-local tails, or a practically large speed separation. The order of the fixed-temperature and vanishing-error limits remains part of the conclusion.
 
 **Source pointers.** [Physical interpretation and boundaries](../science/interpretation.md); [related work and attribution](../references/related-work.md); [all main theorem statements](../science/model.md); [bridge: final quantitative interpretation](bridge.md#what-the-certified-constants-do-and-do-not-say).
+
+**Finite-temperature synthesis.** Also combine [M25](#m25) and [M27](#m27) for exact attractive global-$`K`$ preparation on $`0\le\beta\le1/100`$, and [M20](#m20) and [M29](#m29) for global-$`K`$ exclusion of genuine dissipation on every real $`\beta\ge12/5`$. State the inherited stationary thermal accuracy floor and the local/global coherent-control separation. The intervening feasibility and exact transition remain unresolved; monotone witness forms do not prove a monotone complete feasible set. [Full comparison](../science/finite-temperature-feasibility.md).

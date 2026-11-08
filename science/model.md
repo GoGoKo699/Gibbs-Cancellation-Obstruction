@@ -120,3 +120,9 @@ where $`\gamma(\mathcal L)`$ is the minimum positive decay rate $`-\mathrm{Re}\l
 The [construction](local-construction.md) supplies positive local baths with stationary error $`O(\eta)`$ and relaxation gap $`\Theta(\eta)`$. Theorem 2 proves both the matching converse and an $`\Omega(\eta)`$ lower bound on that family's actual error.
 
 The temperature interval and comparison constants may depend on $`H`$. No uniform size, temperature or finite-error advantage is claimed by this asymptotic notation.
+
+## Comparison model: unrestricted coherent control
+
+The preceding three theorems retain the local support restriction on both coherent terms and individual jumps. A separately specified comparison permits arbitrary global $`K`$ while keeping each effective jump on one site or an adjacent pair. For the explicit $`H_0`$, the [finite-temperature account](finite-temperature-feasibility.md) proves exact unique attractive Gibbs preparation for $`0\le\beta\le1/100`$ in that comparison model and excludes genuine dissipative stationarity for every real $`\beta\ge12/5`$, even there. It rigorously certifies the ground-state marginals and thermal deficit, with a stationary trace-distance floor inherited from [Dissipative-Locality-Accuracy](https://github.com/GoGoKo699/Dissipative-Locality-Accuracy/blob/007749711a769111b86c0413ef9f5b91e2b88cac/science/converse.md).
+
+The middle temperature interval is unresolved. Neither an exact transition nor monotonicity of the complete feasible set is asserted. At $`\beta=3/1000`$ and $`1/100`$, the original local-$`K`$ algebraic obstruction and the exact global-$`K`$ construction give a coherent-control separation. Pure Hamiltonian stationarity remains possible throughout. The added comparison supplies no local-$`K`$ attaining construction and does not alter the genericity quantifiers above.

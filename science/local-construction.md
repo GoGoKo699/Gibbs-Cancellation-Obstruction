@@ -193,3 +193,16 @@ Impose three conditions on $`H`$: a simple spectrum; rank 31 of the local moment
 For each $`H`$ in their intersection, the [isolated-zero argument](gibbs-certificate.md#one-high-temperature-interval-for-a-fixed-hamiltonian) gives a punctured high-temperature interval where the obstruction holds. The population inverse, coefficient positivity and dissipative coercivity supply another such interval. Their intersection proves Theorem 3.
 
 The generic statement is: for each such $`H`$, some $`\beta_*(H)>0`$ exists, and every fixed $`0<\beta<\beta_*(H)`$ has the stated error–gap law. It contains no common temperature window or common conditioning constant.
+
+## Exact completion when coherent control is global
+
+The secularly balanced bath has a second consequence in the comparison model with unrestricted global $`K`$. At positive inverse temperature and simple spectrum, let $`B=\mathcal D_\beta(\rho_\beta)`$ and set, in the exact energy basis,
+
+```math
+K_{mn}=-i\frac{B_{mn}}{p_n-p_m}\quad(m\ne n),
+\qquad K_{mm}\in\mathbb R.
+```
+
+Since $`\Pi B=0`$, this Hermitian operator obeys $`-i[K,\rho_\beta]=-B`$. The standard spectral-stabilizability completion therefore makes the Gibbs target exact. The same Hilbert–Schmidt coercivity proves uniqueness and attraction because every Hermitian commutator is skew-adjoint. The interval certificate supplies this construction throughout $`0<\beta\le1/100`$; use local depolarization directly at zero.
+
+The [full feasibility account](finite-temperature-feasibility.md#exact-high-temperature-preparation-with-global-coherent-control) gives the proof, attribution and coherent-strength limits. This $`K`$ is generally global. It does not replace or improve the preceding approximate construction inside the original local-$`K`$ model.
