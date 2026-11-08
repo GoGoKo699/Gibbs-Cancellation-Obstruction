@@ -65,9 +65,10 @@ Each value is evaluated with the certified energy balls, not a floating-point
 partition function. At beta=4, the output certifies
 
 ```math
-0.000006066710605253\lt \delta_4\lt 0.000006066710605254,
-\qquad
-0.000029781677008303\lt \mu/2-\delta_4\lt 0.000029781677008304.
+\begin{aligned}
+0.000006066710605253&\lt \delta_4\lt 0.000006066710605254,\\
+0.000029781677008303&\lt \mu/2-\delta_4\lt 0.000029781677008304.
+\end{aligned}
 ```
 
 The universal pure-target stationary bound $`1-\langle g|\sigma|g\rangle \ge\mu/2`$ is inherited from [Dissipative-Locality-Accuracy, stationary-state converse](https://github.com/GoGoKo699/Dissipative-Locality-Accuracy/blob/007749711a769111b86c0413ef9f5b91e2b88cac/science/converse.md). Therefore any

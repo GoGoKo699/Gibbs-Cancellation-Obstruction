@@ -72,9 +72,10 @@ The table is illustrative. The [machine certificate](../verification/ground-ther
 ```
 
 ```math
-0.000072889471412\lt r\lt 0.000072889471413,
-\qquad
-3.005072939810\lt E_1-E_0\lt 3.005072939811.
+\begin{aligned}
+0.000072889471412&\lt r\lt 0.000072889471413,\\
+3.005072939810&\lt E_1-E_0\lt 3.005072939811.
+\end{aligned}
 ```
 
 Both minima are uniquely attained on bond $`(1,2)`$. The thermal deficit is evaluated from the certified energy balls through the exact expression
