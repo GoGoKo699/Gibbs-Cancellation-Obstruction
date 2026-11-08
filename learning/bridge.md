@@ -509,3 +509,27 @@ The same witness has a certified positive, coercive bath family on the continuou
 At exactly $`\beta=0`$, local depolarization fixes the maximally mixed target and relaxes rapidly. There is no contradiction: the accuracy limit holds $`\beta>0`$ fixed, and the conditioning can deteriorate as $`\beta\downarrow0`$. These limits cannot be exchanged without further estimates.
 
 Finally, the theorem concerns five qubits and adjacent-pair terms. Five is the first chain length at which the dimension of this larger local map space even permits a one-dimensional evaluation kernel. The finite certificate does not imply an all-chain theorem. It does not exclude three-site or four-site baths, prove that quasi-local tails are necessary, or cover retained ancillas and arbitrary time-dependent state preparation. The [interpretation page](../science/interpretation.md) and [related-work account](../references/related-work.md) keep those boundaries explicit.
+
+## From ground marginals to finite-temperature feasibility
+
+The same stationary-state framework has a second use when only individual jump support remains local. Rivas–Huelga [§5.2](https://arxiv.org/pdf/1104.5242v2#page=37) supplies the GKLS form and [§5.4](https://arxiv.org/pdf/1104.5242v2#page=45) distinguishes stationarity from relaxation. The energy-basis language in [§6.2.1](https://arxiv.org/pdf/1104.5242v2#page=57) and thermal balance in [§6.2.8](https://arxiv.org/pdf/1104.5242v2#page=73) connect the generator to its Gibbs target. Ground-marginal invariants and the finite interval certificates below are project material beyond the anchor.
+
+Let $`|g\rangle`$ be the unique ground vector and $`\delta_\beta=1-\langle g|\rho_\beta|g\rangle`$. The [inherited pure-target theorem](https://github.com/GoGoKo699/Dissipative-Locality-Accuracy/blob/007749711a769111b86c0413ef9f5b91e2b88cac/science/converse.md) states that a stationary $`\sigma`$ with a nonscalar supported jump has $`1-\langle g|\sigma|g\rangle\ge\mu/2`$, where $`\mu`$ is the least allowed ground-marginal eigenvalue. Measuring $`|g\rangle\langle g|`$ therefore yields
+
+```math
+\frac12\|\sigma-\rho_\beta\|_1
+\ge\left[\frac\mu2-\delta_\beta\right]_+.
+```
+
+The [new certificate](../verification/ground-thermal/README.md) proves all nine marginals full rank and makes that floor positive at $`\beta=4`$. For exact Gibbs stationarity, the ground vector is fixed rather than moving with the output. Its diagonal commutator vanishes for every controlled $`K`$; keeping the exact Boltzmann weights gives a quadratic form for each supported jump. Strict negativity of all four bond forms at $`\beta=12/5`$ prevents dissipative cancellation. Their monotonicity extends the exclusion to every real $`\beta\ge12/5`$, including global coherent control.
+
+The high-temperature side uses the existing secular balance differently. Put $`B=\mathcal D_\beta(\rho_\beta)`$. Its energy diagonal is zero. For distinct Gibbs weights choose the Hermitian controlled Hamiltonian
+
+```math
+K_{mn}=-i\frac{B_{mn}}{p_n-p_m}\quad(m\ne n),
+\qquad K_{mm}\in\mathbb R.
+```
+
+The $`mn`$ entry of $`-i[K,\rho_\beta]`$ is $`-iK_{mn}(p_n-p_m)=-B_{mn}`$. The exact Gibbs target is therefore stationary. The same coercivity proves global attraction because this arbitrary commutator is Hilbert–Schmidt skew-adjoint. Use depolarization directly at $`\beta=0`$. This is the inherited spectral-stabilizability completion, not a new reservoir prescription.
+
+The resulting $`K`$ is generally global. Its exact construction on $`0\le\beta\le1/100`$ does not contradict the local-$`K`$ obstruction. The middle interval remains unresolved, and the unscaled contraction margin does not price global control or prove efficient synthesis. The [full account](../science/finite-temperature-feasibility.md) supplies the proofs, exact-source ownership and all temperature quantifiers.

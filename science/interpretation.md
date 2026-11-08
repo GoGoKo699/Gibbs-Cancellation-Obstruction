@@ -55,3 +55,11 @@ Exact quantum Gibbs samplers with quasi-local terms are an important positive co
 Time-dependent controls, repeated bath resets, persistent auxiliary systems, measurement and feedback with enlarged support, or preparation through a sequence of intermediate states need separate analysis. A system can reach a desired state at a selected time without that state being the stationary state of a single fixed local generator.
 
 The [related-work account](../references/related-work.md) compares those models explicitly. The current contribution is a precise autonomous local limit, with an attainable approximation law inside that same model.
+
+## Which locality restriction controls finite-temperature feasibility?
+
+The support of a jump and the support of coherent control are independent resources. [Dissipative-Locality-Accuracy](https://github.com/GoGoKo699/Dissipative-Locality-Accuracy) permits global coherent control but keeps each jump individually supported; its pure-target stationary-fidelity bound transfers to a robust thermal approximation floor through the ground projector. The explicit ground state here has all nine allowed marginals full rank, and at $`\beta=4`$ that inherited bound forces half-trace-distance error above $`0.000029781677008303`$ for every genuinely dissipative stationary output.
+
+With unrestricted global $`K`$, the existing positive high-temperature reservoir can have its off-diagonal drift cancelled exactly. It then prepares the exact unique attractive Gibbs state for $`0\le\beta\le1/100`$. The original local-$`K`$ obstruction excludes this behavior, for example at the rational temperatures $`3/1000`$ and $`1/100`$. A separate rigorously negative ground-population form excludes all genuine dissipative stationary realizations for every real $`\beta\ge12/5`$, even with global $`K`$.
+
+The [finite-temperature account](finite-temperature-feasibility.md) preserves all three statements and their different proofs. Its middle interval remains unresolved; no exact transition or monotonicity of the full feasible set follows. A purely Hamiltonian generator remains stationary but cannot attract uniquely. These conclusions concern the specified five-qubit autonomous model and do not extend the support family or supply an efficient global-control implementation.

@@ -14,6 +14,7 @@ For a generic five-qubit chain, the answer is negative: every stationary nearest
 | Why must accurate stationary preparation slow down at bounded strength? | [Accuracy and relaxation](accuracy-relaxation.md) |
 | How is the upper-bound exponent attained with positive bond-local baths? | [The high-temperature construction](local-construction.md) |
 | What can be quantified for the explicit witness? | [Quantitative witness](quantitative-witness.md) |
+| What changes when only coherent control becomes global? | [Finite-temperature feasibility](finite-temperature-feasibility.md) |
 | What changes if support, temperature or the preparation model changes? | [Physical interpretation](interpretation.md) |
 
 The [related-work account](../references/related-work.md) distinguishes the new Gibbs-family result from inherited inverse-Lindblad and weak-coupling methods. [Verification](../verification/README.md) separates exact finite certificates, rigorous interval bounds and numerical illustrations.

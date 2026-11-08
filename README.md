@@ -8,6 +8,12 @@ At sufficiently high temperature, the associated optimal relaxation gap under a 
 
 The proof combines a local-superoperator dimension calculation, an exact finite-field/Galois certificate and analytic genericity. A positive local construction matches the accuracy–relaxation exponent. For the explicit witness, rigorous interval arithmetic also certifies positive reservoirs throughout $`0\le\beta\le0.01`$ and finite-error bounds at two rational temperatures. The continuous construction interval is separate from the evaluation-rank claim. The certified converse constants are extremely large, so a useful finite-error speed penalty remains unestablished.
 
+## Strict local jumps with global coherent control
+
+The sister project [Dissipative-Locality-Accuracy](https://github.com/GoGoKo699/Dissipative-Locality-Accuracy) supplies an inherited pure-target stationary-fidelity bound. Applied to this project's explicitly certified five-qubit ground state, it gives a finite-temperature stationary trace-distance floor. The [full feasibility account](science/finite-temperature-feasibility.md) also keeps the support of the controlled Hamiltonian $`K`$ separate from the support of each jump: with unrestricted global $`K`$, the existing positive reservoir prepares the exact Gibbs state attractively for $`0\le\beta\le1/100`$, while a new rigorous ground-population certificate excludes genuine dissipative stationarity for every real $`\beta\ge12/5`$, even with global $`K`$.
+
+The middle interval remains unresolved. These are certified feasible and forbidden regions, not an exact crossover. The original local-$`K`$ cancellation theorem remains unchanged; at $`\beta=3/1000`$ and $`1/100`$ it gives an explicit separation from the global-control construction. The [ground/thermal certificate](verification/ground-thermal/README.md) encloses all nine allowed ground-state marginal spectra and the thermal deficit. The pure-target bound, spectral population balance and global coherent completion retain their [inherited attribution](references/related-work.md#finite-temperature-feasibility-and-coherent-control).
+
 ## Read the result
 
 | Start here | What it provides |
@@ -15,6 +21,7 @@ The proof combines a local-superoperator dimension calculation, an exact finite-
 | [Scientific account](science/README.md) | A connected route through the model, proofs, construction and interpretation |
 | [Model and theorems](science/model.md) | Exact support restrictions, genericity quantifiers, strength budget and error convention |
 | [Quantitative witness](science/quantitative-witness.md) | Certified constants, a positive reservoir and explicit finite-error ranges |
+| [Finite-temperature feasibility](science/finite-temperature-feasibility.md) | Certified ground marginals, a thermal accuracy floor and local/global coherent-control comparison |
 | [Related work](references/related-work.md) | The contribution and its boundaries relative to existing results |
 | [Verification](verification/README.md) | Portable commands and exact/rational inputs for reproducing the certificates |
 

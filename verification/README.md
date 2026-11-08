@@ -54,6 +54,16 @@ The [construction package](construction/README.md) gives the full exact coeffici
 
 The continuous interval concerns the construction and coercivity. It does not certify full evaluation rank at every real temperature in that interval. The two rational point examples separately satisfy the exact obstruction theorem.
 
+## Ground-state marginals, thermal deficit and cold population forms
+
+```sh
+python verification/ground-thermal/certify_ground_thermal.py --output verification/local-output/ground-thermal.json
+```
+
+The [ground/thermal package](ground-thermal/README.md) uses the authoritative `data/hamiltonian.json` directly. Verified 256-bit Rump eigenvalue/eigenvector enclosures certify all 32 energies and all nine complete marginal spectra. Arb Boltzmann sums give thermal deficits and the inherited stationary error floor. Interval LDL* certifies four strictly negative bond-population forms at $`\beta=12/5`$; the written monotonicity argument extends exact exclusion to every real colder inverse temperature. All load-bearing checks remain active under `python -O`.
+
+The runner includes this as its seventh named check and records the result's SHA256, acceptance conditions and input hash. The [full mathematical account](../science/finite-temperature-feasibility.md) distinguishes this cold witness, the inherited pure-target approximation bound, the existing exact evaluation-rank certificate and the positive high-temperature reservoir interval. The sufficient exclusion endpoint is not an exact transition.
+
 ## Reading and modifying reports
 
 The construction reports use Arb's midpoint-plus-radius notation. A printed ball encloses a value; it is not a decimal equality. Use the safely rounded bounds in the [quantitative account](../science/quantitative-witness.md), or inspect the directed endpoints in the code. An enclosure failure should remain a failure until precision or the mathematical bound is improved.
@@ -62,4 +72,4 @@ The Hamiltonian and rational design witnesses are sufficient to reproduce all re
 
 ## Actual hosted mathematics
 
-The separate [hosted rendering check](hosted/README.md) compares every expression on the commit-pinned GitHub pages with its source at wide and narrow viewports, and retains screenshots for visual review. It is independent of the six scientific certificate checks. A rendering pass does not establish a mathematical theorem; a certificate pass does not establish readable rendering.
+The separate [hosted rendering check](hosted/README.md) compares every expression on the commit-pinned GitHub pages with its source at wide and narrow viewports, and retains screenshots for visual review. It is independent of the seven scientific certificate checks. A rendering pass does not establish a mathematical theorem; a certificate pass does not establish readable rendering.

@@ -44,6 +44,14 @@ The certification uses standard finite-field rank tests, elementary Galois-group
 
 The high-temperature continuation uses finite-dimensional positivity, a Schur complement, analytic inversion and dissipative coercivity. It does not require nondegeneracy of all Bohr frequencies. Neither the elementary perturbation tools nor the inherited inverse-Lindblad framework are claimed as new methods.
 
+## Finite-temperature feasibility and coherent control
+
+The sister project [Dissipative-Locality-Accuracy, pinned converse](https://github.com/GoGoKo699/Dissipative-Locality-Accuracy/blob/007749711a769111b86c0413ef9f5b91e2b88cac/science/converse.md), supplies the inherited pure-target ordinary stationary-infidelity bound $`\mu/2`$ with arbitrary global coherent control and individually supported jumps. Its Gibbs trace-distance floor is a direct corollary, not an independent discovery of that bound. The fixed-Gibbs-eigenvector population argument is an application of the inherited stationary balance mechanism.
+
+Linowski, Rudnicki and Gneiting [LRG23, Proposition 1 and Eq. (5)] give spectral stabilizability: a dissipative drift can be counteracted by an arbitrary Hamiltonian precisely when it vanishes inside every equal-eigenvalue block of the target. For simple spectrum this is energy-population balance, and their explicit off-diagonal Hamiltonian gives the completion used here. The positive secular reservoirs remain the existing construction of this project and its credited weak-coupling antecedents. The idea of a positive local-cooling temperature floor is also established: Žnidarič [Z15] treats one-qubit dissipation with arbitrary two-qubit coherent control and obtains a finite singlet-fidelity ceiling.
+
+The [added explicit certificate](../science/finite-temperature-feasibility.md) encloses this five-qubit witness's nine ground-state marginal spectra and thermal deficit, and certifies four negative bond-population forms. It yields exact global-$`K`$ preparation for $`0\le\beta\le1/100`$, using the inherited reservoir and coherent completion, and excludes genuine dissipative stationarity for every real $`\beta\ge12/5`$. The high-temperature local/global coherent-control separation keeps the same individual jump support. The intermediate interval and exact boundary are unresolved; the comparison does not assert a new general cooling-floor mechanism, a monotone full feasibility set, or an arbitrary-chain theorem.
+
 ## References
 
 - **[GKS76]** V. Gorini, A. Kossakowski and E. C. G. Sudarshan, *Completely positive dynamical semigroups of N-level systems*, Journal of Mathematical Physics **17**, 821–825 (1976). [DOI](https://doi.org/10.1063/1.522979).
@@ -60,3 +68,6 @@ The high-temperature continuation uses finite-dimensional positivity, a Schur co
 - **[DLZ26]** Z. Ding, B. Li and R. Zhang, *Efficient thermalization of one-dimensional noncommuting Hamiltonians via system-bath interactions with $`\Theta(n)`$ ancilla qubits*, arXiv:2611.03422v1 (2026). [Preprint](https://arxiv.org/abs/2611.03422v1).
 - **[BR89]** J.-P. Bézivin and P. Robba, *A new p-adic method for proving irrationality and transcendence results*, Annals of Mathematics **129**, 151–160 (1989). [DOI](https://doi.org/10.2307/1971488); [publisher statement](https://annals.math.princeton.edu/1989/129-1/p05).
 - **[M20]** B. S. Mityagin, *The Zero Set of a Real Analytic Function*, Mathematical Notes **107**, 529–530 (2020). [DOI](https://doi.org/10.1134/S0001434620030189); [preprint](https://arxiv.org/abs/1512.07276).
+
+- **[LRG23]** T. Linowski, Ł. Rudnicki and C. Gneiting, *Spectral stabilizability*, Physical Review A **107**, 042218 (2023). [DOI](https://doi.org/10.1103/PhysRevA.107.042218); [preprint v2](https://arxiv.org/abs/2212.12245v2).
+- **[Z15]** M. Žnidarič, *Geometry of local quantum dissipation and fundamental limits to local cooling*, Physical Review A **91**, 052107 (2015). [DOI](https://doi.org/10.1103/PhysRevA.91.052107); [preprint](https://arxiv.org/abs/1501.03453).

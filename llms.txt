@@ -12,6 +12,8 @@ This is a scientific research repository about exact Gibbs stationarity under st
 - [Bounded-strength accuracy and relaxation](science/accuracy-relaxation.md)
 - [Matching high-temperature construction](science/local-construction.md)
 - [Certified quantitative witness](science/quantitative-witness.md)
+- [Finite-temperature feasibility and local/global coherent control](science/finite-temperature-feasibility.md)
+- [Rigorous ground/thermal certificate](verification/ground-thermal/README.md)
 - [Physical interpretation and limits](science/interpretation.md)
 - [Related work and attribution](references/related-work.md)
 - [Verification commands](verification/README.md)
@@ -29,3 +31,5 @@ For the physical story, read the learning bridge and science/interpretation.md. 
 ## Scope that must be preserved
 
 Five qubits on an open chain. Coherent terms and individual Lindblad jumps are supported onsite or on an adjacent pair. Total stationarity permits cancellation between local terms; neither detailed balance nor frustration freeness is assumed. The generic exact-kernel result fixes inverse temperature before taking the generic Hamiltonian set. The matching accuracy-relaxation law is a target-dependent high-temperature asymptotic statement under a norm cap on the entire generator. The continuous numerical interval certifies the positive construction, not full evaluation rank at every real temperature. No arbitrary-chain-length theorem or useful finite-error converse constant is established.
+
+The original theorems constrain local coherent terms as well as individual jumps. The separately labelled global-K comparison keeps strict local jumps, permits exact attractive Gibbs preparation for 0<=beta<=.01, and excludes genuine dissipative stationarity for every real beta>=2.4. The middle interval is unresolved. Credit the pure-target stationary bound to the pinned Dissipative-Locality-Accuracy converse and global coherent completion to spectral stabilizability. Pure Hamiltonian stationarity remains possible. Do not infer a continuous evaluation-rank result from the positive reservoir interval.

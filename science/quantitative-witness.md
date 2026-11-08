@@ -126,3 +126,18 @@ Rescaling the full generator to a prescribed budget $`J`$ preserves its stationa
 ```
 
 These inequalities certify both the matching exponent and a constructive finite-error range. The large separation between their two constants remains unresolved. They establish neither a useful estimate of the optimum nor a scalable thermalization algorithm.
+
+## Certified ground state and a cold feasibility exclusion
+
+The same authoritative $`H_0`$ has a unique ground vector $`|g\rangle`$ whose five on-site and four adjacent-pair marginals are all positive definite. The [ground/thermal package](../verification/ground-thermal/README.md) encloses all 32 energies, every marginal eigenvalue and the true Boltzmann deficit. Define $`\mu=\min_S\lambda_{\min}(g_S)`$ and $`\delta_\beta=1-\langle g|\rho_\beta|g\rangle`$.
+
+| Quantity | Certified directed bounds |
+|---|---|
+| First energy gap | $`3.005072939810<E_1-E_0<3.005072939811`$ |
+| Least allowed ground-marginal eigenvalue, on bond $`(1,2)`$ | $`0.000071696775227<\mu<0.000071696775228`$ |
+| Thermal deficit at $`\beta=4`$ | $`0.000006066710605253<\delta_4<0.000006066710605254`$ |
+| Inherited stationary approximation floor | $`\frac12\|\sigma-\rho_4\|_1>0.000029781677008303`$ |
+
+The last row is the direct Gibbs corollary of Dissipative-Locality-Accuracy's inherited $`\mu/2`$ pure-target bound for any stationary $`\sigma`$ with a nonscalar allowed jump. It permits unrestricted global coherent control. It is separate from the stronger exact-target exclusion: four rigorous negative ground-population forms at $`\beta=12/5`$ have certified margins $`0.00008`$, $`0.029`$, $`0.013`$ and $`0.00029`$ in their unnormalized Pauli coefficient bases. Their analytic monotonicity excludes genuine dissipative stationarity for every real $`\beta\ge12/5`$, even with global $`K`$.
+
+The [full proof and comparison](finite-temperature-feasibility.md) also turns the existing positive secular bath into exact attractive Gibbs preparation for $`0\le\beta\le1/100`$ when global $`K`$ is supplied. These bounds do not locate an exact crossover or settle the intervening interval. They do not change the original local-control finite-error constants above.
