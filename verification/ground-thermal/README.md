@@ -40,7 +40,7 @@ rational enclosures for every eigenvalue, including the largest ones.
 Thus all allowed ground-state marginals are positive definite, and
 
 ```math
-0.000071696775227<\mu<0.000071696775228.
+0.000071696775227\lt \mu\lt 0.000071696775228.
 ```
 
 The minimum is uniquely attained on bond 1,2. With
@@ -48,7 +48,7 @@ $`r=\min_S\lambda_{\min}(g_S)/\lambda_{\max}(g_S)`$, the same bond uniquely
 attains the minimum, and
 
 ```math
-0.000072889471412<r<0.000072889471413.
+0.000072889471412\lt r\lt 0.000072889471413.
 ```
 
 ## Thermal deficit and inherited bound
@@ -65,9 +65,9 @@ Each value is evaluated with the certified energy balls, not a floating-point
 partition function. At beta=4, the output certifies
 
 ```math
-0.000006066710605253<\delta_4<0.000006066710605254,
+0.000006066710605253\lt \delta_4\lt 0.000006066710605254,
 \qquad
-0.000029781677008303<\mu/2-\delta_4<0.000029781677008304.
+0.000029781677008303\lt \mu/2-\delta_4\lt 0.000029781677008304.
 ```
 
 The universal pure-target stationary bound $`1-\langle g|\sigma|g\rangle \ge\mu/2`$ is inherited from [Dissipative-Locality-Accuracy, stationary-state converse](https://github.com/GoGoKo699/Dissipative-Locality-Accuracy/blob/007749711a769111b86c0413ef9f5b91e2b88cac/science/converse.md). Therefore any
@@ -86,7 +86,7 @@ $`e^{-\beta(E_1-E_0)}\ge r`$. The output brackets the first crossing between
 3.18245872502 and 3.18245872503 and certifies
 
 ```math
-3.170161438761<\frac{\log(1/r)}{E_1-E_0}<3.170161438762.
+3.170161438761\lt \frac{\log(1/r)}{E_1-E_0}\lt 3.170161438762.
 ```
 
 These sharpened exact-target tests still do not assert a feasible region on

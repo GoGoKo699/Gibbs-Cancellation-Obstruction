@@ -92,7 +92,7 @@ Suppose $`\mathcal D_\beta`$ has coercivity $`\delta>0`$ on traceless matrices, 
 The generator has a unique faithful stationary state and obeys $`\gamma\ge\eta\delta`$. Splitting its stationary equation into energy-diagonal and off-diagonal parts gives
 
 ```math
-0<\eta\le\frac{\nu}{2MF}
+0\lt \eta\le\frac{\nu}{2MF}
 \quad\Longrightarrow\quad
 \frac12\lVert\sigma_{\beta,\eta}-\rho_\beta\rVert_1
 \le\frac{\sqrt{32}Fr}{\nu}\,\eta.
@@ -105,7 +105,7 @@ This bound controls the full remainder by an inverse estimate; it is not a fit t
 | Bond positivity margin $`C_b\succeq\mu I`$ | $`\mu\ge0.7234`$ | $`\mu\ge0.2019`$ |
 | Coercivity $`\delta`$ | $`\delta\ge13.900`$ | $`\delta\ge8.859`$ |
 | Dissipator norm bound $`M`$ | $`M\le75.580`$ | $`M\le102.952`$ |
-| Allowed range for the error bound | $`0<\eta\le0.000548`$ | $`0<\eta\le0.000205`$ |
+| Allowed range for the error bound | $`0\lt \eta\le0.000548`$ | $`0\lt \eta\le0.000205`$ |
 | Stationary error | $`\varepsilon\le1.022\eta`$ | $`\varepsilon\le23.411\eta`$ |
 | Full generator norm for $`\eta\le1`$ | $`\lVert \mathcal L\rVert_{2\to2}\le142.470`$ | $`\lVert \mathcal L\rVert_{2\to2}\le169.843`$ |
 
@@ -115,14 +115,14 @@ Rescaling the full generator to a prescribed budget $`J`$ preserves its stationa
 0.0954\,J\varepsilon
 \le\Gamma_{H_0,3/1000,J}(\varepsilon)
 \le2.0532\times10^{21}J\varepsilon,
-\qquad 0<\varepsilon\le0.00056,
+\qquad 0\lt \varepsilon\le0.00056,
 ```
 
 ```math
 0.0022\,J\varepsilon
 \le\Gamma_{H_0,1/100,J}(\varepsilon)
 \le4.8179\times10^{17}J\varepsilon,
-\qquad 0<\varepsilon\le0.00479.
+\qquad 0\lt \varepsilon\le0.00479.
 ```
 
 These inequalities certify both the matching exponent and a constructive finite-error range. The large separation between their two constants remains unresolved. They establish neither a useful estimate of the optimum nor a scalable thermalization algorithm.
@@ -133,10 +133,10 @@ The same authoritative $`H_0`$ has a unique ground vector $`|g\rangle`$ whose fi
 
 | Quantity | Certified directed bounds |
 |---|---|
-| First energy gap | $`3.005072939810<E_1-E_0<3.005072939811`$ |
-| Least allowed ground-marginal eigenvalue, on bond $`(1,2)`$ | $`0.000071696775227<\mu<0.000071696775228`$ |
-| Thermal deficit at $`\beta=4`$ | $`0.000006066710605253<\delta_4<0.000006066710605254`$ |
-| Inherited stationary approximation floor | $`\frac12\|\sigma-\rho_4\|_1>0.000029781677008303`$ |
+| First energy gap | $`3.005072939810\lt E_1-E_0\lt 3.005072939811`$ |
+| Least allowed ground-marginal eigenvalue, on bond $`(1,2)`$ | $`0.000071696775227\lt \mu\lt 0.000071696775228`$ |
+| Thermal deficit at $`\beta=4`$ | $`0.000006066710605253\lt \delta_4\lt 0.000006066710605254`$ |
+| Inherited stationary approximation floor | $`\frac12\lVert\sigma-\rho_4\rVert_1>0.000029781677008303`$ |
 
 The last row is the direct Gibbs corollary of Dissipative-Locality-Accuracy's inherited $`\mu/2`$ pure-target bound for any stationary $`\sigma`$ with a nonscalar allowed jump. It permits unrestricted global coherent control. It is separate from the stronger exact-target exclusion: four rigorous negative ground-population forms at $`\beta=12/5`$ have certified margins $`0.00008`$, $`0.029`$, $`0.013`$ and $`0.00029`$ in their unnormalized Pauli coefficient bases. Their analytic monotonicity excludes genuine dissipative stationarity for every real $`\beta\ge12/5`$, even with global $`K`$.
 

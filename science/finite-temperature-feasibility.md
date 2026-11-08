@@ -8,7 +8,7 @@ Strict support of the reservoirs and strict support of coherent control impose d
 | Unrestricted global $`K`$ | Every genuinely dissipative stationary realization is excluded for every real $`\beta\ge12/5`$. |
 | On-site/adjacent-pair terms in $`K`$ | The original cancellation obstruction applies to $`H_0`$ at every positive algebraic $`\beta`$, including $`3/1000`$ and $`1/100`$. |
 
-The interval $`1/100<\beta<12/5`$ remains unresolved in the global-control model. These results give certified feasible and forbidden regions, rather than an exact transition or a proof that the whole feasible set is an interval. A purely Hamiltonian generator can still fix any Gibbs state; the exclusion concerns genuine dissipation and therefore excludes unique attractive preparation.
+The interval $`1/100\lt \beta\lt 12/5`$ remains unresolved in the global-control model. These results give certified feasible and forbidden regions, rather than an exact transition or a proof that the whole feasible set is an interval. A purely Hamiltonian generator can still fix any Gibbs state; the exclusion concerns genuine dissipation and therefore excludes unique attractive preparation.
 
 ## Two coherent-control models
 
@@ -28,7 +28,7 @@ Let the simple spectrum, normalized ground vector and Gibbs weights be
 
 ```math
 H_0|j\rangle=E_j|j\rangle,\qquad
-E_0<E_1<\cdots<E_{31},\qquad |g\rangle=|0\rangle,
+E_0\lt E_1\lt \cdots\lt E_{31},\qquad |g\rangle=|0\rangle,
 ```
 
 ```math
@@ -68,13 +68,13 @@ The certificate reconstructs the exact Gaussian-integer matrix from the coeffici
 The table is illustrative. The [machine certificate](../verification/ground-thermal/ground_thermal_certificate.json) supplies outward rational enclosures for every eigenvalue and proves
 
 ```math
-0.000071696775227<\mu<0.000071696775228,
+0.000071696775227\lt \mu\lt 0.000071696775228,
 ```
 
 ```math
-0.000072889471412<r<0.000072889471413,
+0.000072889471412\lt r\lt 0.000072889471413,
 \qquad
-3.005072939810<E_1-E_0<3.005072939811.
+3.005072939810\lt E_1-E_0\lt 3.005072939811.
 ```
 
 Both minima are uniquely attained on bond $`(1,2)`$. The thermal deficit is evaluated from the certified energy balls through the exact expression
@@ -88,7 +88,7 @@ Both minima are uniquely attained on bond $`(1,2)`$. The thermal deficit is eval
 At $`\beta=4`$ the certified enclosure is
 
 ```math
-0.000006066710605253<\delta_4<0.000006066710605254.
+0.000006066710605253\lt \delta_4\lt 0.000006066710605254.
 ```
 
 ## An inherited stationary approximation floor
@@ -117,7 +117,7 @@ For the explicit witness,
 >0.000029781677008303.
 ```
 
-This is a stationary accuracy floor, independent of coherent or dissipative strengths. The sufficient test $`\delta_\beta<\mu/2`$ starts after its unique crossing in $`(3.41147195216,3.41147195217)`$. Uniqueness follows because each positive-gap Boltzmann factor decreases strictly with $`\beta`$. That crossing is a threshold for this inherited test, not the physical feasibility boundary.
+This is a stationary accuracy floor, independent of coherent or dissipative strengths. The sufficient test $`\delta_\beta\lt \mu/2`$ starts after its unique crossing in $`(3.41147195216,3.41147195217)`$. Uniqueness follows because each positive-gap Boltzmann factor decreases strictly with $`\beta`$. That crossing is a threshold for this inherited test, not the physical feasibility boundary.
 
 ## Exact-target population balance is stronger
 
@@ -153,8 +153,8 @@ At least one centered matrix is nonzero when a nonscalar jump is present. Summin
 The certificate brackets its sufficient exclusion threshold as
 
 ```math
-3.170161438761<\frac{\log(1/r)}{E_1-E_0}
-<3.170161438762.
+3.170161438761\lt \frac{\log(1/r)}{E_1-E_0}
+\lt 3.170161438762.
 ```
 
 Using $`R\preceq\delta_\beta I`$ in the same identity also gives $`\delta_\beta\ge\mu`$ by the inherited marginal argument. Its crossing is in $`(3.18245872502,3.18245872503)`$. These are sharper applications of inherited balance to this fixed Gibbs eigenvector; neither condition is a sufficiency theorem for preparation.
